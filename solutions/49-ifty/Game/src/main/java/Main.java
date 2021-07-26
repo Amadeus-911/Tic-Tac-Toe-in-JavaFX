@@ -10,9 +10,10 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import java.awt.*;
 
 
-public class Main extends Application {
+public class Main extends Application  {
 
 
     public static void main(String[] args) {
@@ -21,18 +22,16 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Tic-Tac-Toe");
         Button button = new Button("click Me");
 
-        StackPane layout = new StackPane();
-        layout.getChildren().add(button);
-
-
-        Scene scene = new Scene(layout, 300, 275);
+        Scene scene = new Scene(root);
 
 
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+
 }
