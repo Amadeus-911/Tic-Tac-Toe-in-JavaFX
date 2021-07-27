@@ -68,39 +68,39 @@
             <Line endX="164.0" layoutX="221.0" layoutY="139.0" startX="-160.8000030517578" />
             <StackPane layoutX="54.0" layoutY="50.0" onMouseClicked="#tile1" prefHeight="89.0" prefWidth="108.0">
             <children>
-               <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+               <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children></StackPane>
             <StackPane layoutX="169.0" layoutY="230.0" onMouseClicked="#tile8" prefHeight="89.0" prefWidth="108.0">
             <children>
-               <Label fx:id="label8" alignment="CENTER" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+               <Label fx:id="label8" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children></StackPane>
             <StackPane layoutX="54.0" layoutY="230.0" onMouseClicked="#tile7" prefHeight="89.0" prefWidth="108.0">
             <children>
-               <Label fx:id="label7" alignment="CENTER" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+               <Label fx:id="label7" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children></StackPane>
             <StackPane layoutX="283.0" layoutY="140.0" onMouseClicked="#tile6" prefHeight="89.0" prefWidth="108.0">
             <children>
-               <Label fx:id="label6" alignment="CENTER" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+               <Label fx:id="label6" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children></StackPane>
             <StackPane layoutX="283.0" layoutY="230.0" onMouseClicked="#tile9" prefHeight="89.0" prefWidth="108.0">
             <children>
-               <Label fx:id="label9" alignment="CENTER" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+               <Label fx:id="label9" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children></StackPane>
             <StackPane layoutX="169.0" layoutY="140.0" onMouseClicked="#tile5" prefHeight="89.0" prefWidth="108.0">
             <children>
-               <Label fx:id="label5" alignment="CENTER" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+               <Label fx:id="label5" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children></StackPane>
             <StackPane layoutX="283.0" layoutY="45.0" onMouseClicked="#tile3" prefHeight="89.0" prefWidth="108.0">
             <children>
-               <Label fx:id="label3" alignment="CENTER" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+               <Label fx:id="label3" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children></StackPane>
             <StackPane layoutX="169.0" layoutY="45.0" onMouseClicked="#tile2" prefHeight="89.0" prefWidth="108.0">
             <children>
-               <Label fx:id="label2" alignment="CENTER" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+               <Label fx:id="label2" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children></StackPane>
             <StackPane layoutX="54.0" layoutY="140.0" onMouseClicked="#tile4" prefHeight="89.0" prefWidth="108.0">
             <children>
-               <Label fx:id="label4" alignment="CENTER" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+               <Label fx:id="label4" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children></StackPane>
             <Line endX="-112.5999755859375" endY="251.0" layoutX="395.0" layoutY="60.0" startX="-112.59999084472656" startY="-1.52587890625E-5" />
         </children>
