@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 
 public class Controller {
 
+    private String X = "X";
     private boolean turnX = true;
 
     @FXML private Label label1;
@@ -21,10 +22,17 @@ public class Controller {
 
     public void tile1(){
         System.out.println("Hello I'm Tile 1");
+        String val = label1.getText();
         Draw draw = new Draw(label1);
         if(turnX){
             draw.drawX();
-            turnX = false;
+            if(val.equals(X)){
+                turnX = false;
+            }
+        }else{
+            if(!val.equals(X)){
+                draw.drawO();
+            }
         }
     }
     public void  tile2(){
