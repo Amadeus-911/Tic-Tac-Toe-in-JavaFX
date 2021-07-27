@@ -66,15 +66,43 @@
             <Line endX="408.4999694824219" endY="234.1999969482422" layoutX="-26.0" layoutY="-5.0" startX="90.89999389648438" startY="234.1999969482422" />
             <Line endX="-160.80001831054688" endY="249.79998779296875" layoutX="322.0" layoutY="60.0" startX="-160.8000030517578" />
             <Line endX="164.0" layoutX="221.0" layoutY="139.0" startX="-160.8000030517578" />
-            <StackPane layoutX="54.0" layoutY="50.0" onMouseClicked="#tile1" prefHeight="89.0" prefWidth="108.0" />
-            <StackPane layoutX="169.0" layoutY="230.0" onMouseClicked="#tile8" prefHeight="89.0" prefWidth="108.0" />
-            <StackPane layoutX="54.0" layoutY="230.0" onMouseClicked="#tile7" prefHeight="89.0" prefWidth="108.0" />
-            <StackPane layoutX="283.0" layoutY="140.0" onMouseClicked="#tile6" prefHeight="89.0" prefWidth="108.0" />
-            <StackPane layoutX="283.0" layoutY="230.0" onMouseClicked="#tile9" prefHeight="89.0" prefWidth="108.0" />
-            <StackPane layoutX="169.0" layoutY="140.0" onMouseClicked="#tile5" prefHeight="89.0" prefWidth="108.0" />
-            <StackPane layoutX="283.0" layoutY="45.0" onMouseClicked="#tile3" prefHeight="89.0" prefWidth="108.0" />
-            <StackPane layoutX="169.0" layoutY="45.0" onMouseClicked="#tile2" prefHeight="89.0" prefWidth="108.0" />
-            <StackPane layoutX="54.0" layoutY="140.0" onMouseClicked="#tile4" prefHeight="89.0" prefWidth="108.0" />
+            <StackPane layoutX="54.0" layoutY="50.0" onMouseClicked="#tile1" prefHeight="89.0" prefWidth="108.0">
+            <children>
+               <Label prefHeight="67.0" prefWidth="94.0" text="             " />
+            </children></StackPane>
+            <StackPane layoutX="169.0" layoutY="230.0" onMouseClicked="#tile8" prefHeight="89.0" prefWidth="108.0">
+            <children>
+               <Label prefHeight="67.0" prefWidth="94.0" text="             " />
+            </children></StackPane>
+            <StackPane layoutX="54.0" layoutY="230.0" onMouseClicked="#tile7" prefHeight="89.0" prefWidth="108.0">
+            <children>
+               <Label prefHeight="67.0" prefWidth="94.0" text="             " />
+            </children></StackPane>
+            <StackPane layoutX="283.0" layoutY="140.0" onMouseClicked="#tile6" prefHeight="89.0" prefWidth="108.0">
+            <children>
+               <Label prefHeight="67.0" prefWidth="94.0" text="             " />
+            </children></StackPane>
+            <StackPane layoutX="283.0" layoutY="230.0" onMouseClicked="#tile9" prefHeight="89.0" prefWidth="108.0">
+            <children>
+               <Label prefHeight="67.0" prefWidth="94.0" text="             " />
+            </children>
+         </StackPane>
+            <StackPane layoutX="169.0" layoutY="140.0" onMouseClicked="#tile5" prefHeight="89.0" prefWidth="108.0">
+            <children>
+               <Label prefHeight="67.0" prefWidth="94.0" text="             " />
+            </children></StackPane>
+            <StackPane layoutX="283.0" layoutY="45.0" onMouseClicked="#tile3" prefHeight="89.0" prefWidth="108.0">
+            <children>
+               <Label prefHeight="67.0" prefWidth="94.0" text="             " />
+            </children></StackPane>
+            <StackPane layoutX="169.0" layoutY="45.0" onMouseClicked="#tile2" prefHeight="89.0" prefWidth="108.0">
+            <children>
+               <Label prefHeight="67.0" prefWidth="94.0" text="             " />
+            </children></StackPane>
+            <StackPane layoutX="54.0" layoutY="140.0" onMouseClicked="#tile4" prefHeight="89.0" prefWidth="108.0">
+            <children>
+               <Label prefHeight="67.0" prefWidth="94.0" text="             " />
+            </children></StackPane>
             <Line endX="-112.5999755859375" endY="251.0" layoutX="395.0" layoutY="60.0" startX="-112.59999084472656" startY="-1.52587890625E-5" />
         </children>
     </AnchorPane>
