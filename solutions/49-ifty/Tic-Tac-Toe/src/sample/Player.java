@@ -10,9 +10,11 @@ public class Player {
     }
     public void drawX(Label label){
         label.setText("X");
+        label.setOpacity(1);
     }
     public void drawO(Label label){
         label.setText("O");
+        label.setOpacity(1);
     }
 
 
