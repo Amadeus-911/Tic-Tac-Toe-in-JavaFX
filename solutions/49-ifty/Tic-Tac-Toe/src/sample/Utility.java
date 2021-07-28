@@ -82,7 +82,10 @@ public final class Utility {
         boolean condition7 = (label2.getText().equals(label5.getText()) && label5.getText().equals(label8.getText()) && !label2.getText().equals(dot));
         boolean condition8 = (label3.getText().equals(label6.getText()) && label6.getText().equals(label9.getText()) && !label3.getText().equals(dot));
 
-        return condition1 || condition2 || condition3 || condition4 || condition5 || condition6 || condition7 || condition8;
+        boolean condition9 = (isEmpty(label1) && isEmpty(label2) && isEmpty(label3) && isEmpty(label4) && isEmpty(label5) && isEmpty(label6)
+                               &&isEmpty(label7) &&isEmpty(label8) && isEmpty(label9) && !label1.getText().equals(dot)) ;
+
+        return condition1 || condition2 || condition3 || condition4 || condition5 || condition6 || condition7 || condition8 ||condition9;
     }
 
     public static int getCombo(Label label1, Label label2, Label label3, Label label4, Label label5,

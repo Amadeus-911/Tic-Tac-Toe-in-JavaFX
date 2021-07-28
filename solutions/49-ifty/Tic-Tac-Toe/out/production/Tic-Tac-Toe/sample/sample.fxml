@@ -39,7 +39,6 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
@@ -63,46 +62,63 @@
     <Label layoutX="541.0" layoutY="58.0" prefHeight="46.0" prefWidth="150.0" style="-fx-font-size: 30;" text="Theme" />
     <AnchorPane prefHeight="400.0" prefWidth="472.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="274.0" AnchorPane.topAnchor="0.0">
         <children>
+            <Line endX="-112.5999755859375" endY="251.0" layoutX="395.0" layoutY="60.0" startX="-112.59999084472656" startY="-1.52587890625E-5" />
             <Line endX="408.4999694824219" endY="234.1999969482422" layoutX="-26.0" layoutY="-5.0" startX="90.89999389648438" startY="234.1999969482422" />
             <Line endX="-160.80001831054688" endY="249.79998779296875" layoutX="322.0" layoutY="60.0" startX="-160.8000030517578" />
+         <Line fx:id="line3" endX="373.69287109375" endY="270.6000061035156" opacity="0.0" startX="70.49285888671875" startY="270.6000061035156" />
+         <Line fx:id="line7" endX="223.2928466796875" endY="297.4000244140625" opacity="0.0" startX="223.29286193847656" startY="79.80000305175781" />
             <Line endX="164.0" layoutX="221.0" layoutY="139.0" startX="-160.8000030517578" />
-            <StackPane layoutX="54.0" layoutY="50.0" onMouseClicked="#tile1" prefHeight="89.0" prefWidth="108.0">
+         <AnchorPane layoutX="54.0" layoutY="58.0" onMouseClicked="#tile1" prefHeight="82.0" prefWidth="102.0">
             <children>
-               <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
-            </children></StackPane>
-            <StackPane layoutX="169.0" layoutY="230.0" onMouseClicked="#tile8" prefHeight="89.0" prefWidth="108.0">
+               <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="14.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+            </children>
+         </AnchorPane>
+         <AnchorPane layoutX="169.0" layoutY="230.0" onMouseClicked="#tile8" prefHeight="74.0" prefWidth="102.0">
             <children>
-               <Label fx:id="label8" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
-            </children></StackPane>
-            <StackPane layoutX="54.0" layoutY="230.0" onMouseClicked="#tile7" prefHeight="89.0" prefWidth="108.0">
+               <Label fx:id="label8" alignment="CENTER" layoutX="7.0" layoutY="11.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+            </children>
+         </AnchorPane>
+         <AnchorPane layoutX="54.0" layoutY="230.0" onMouseClicked="#tile7" prefHeight="82.0" prefWidth="102.0">
             <children>
-               <Label fx:id="label7" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
-            </children></StackPane>
-            <StackPane layoutX="283.0" layoutY="140.0" onMouseClicked="#tile6" prefHeight="89.0" prefWidth="108.0">
+               <Label fx:id="label7" alignment="CENTER" layoutX="3.0" layoutY="11.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+            </children>
+         </AnchorPane>
+         <AnchorPane layoutX="283.0" layoutY="140.0" onMouseClicked="#tile6" prefHeight="89.0" prefWidth="102.0">
             <children>
-               <Label fx:id="label6" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
-            </children></StackPane>
-            <StackPane layoutX="283.0" layoutY="230.0" onMouseClicked="#tile9" prefHeight="89.0" prefWidth="108.0">
+               <Label fx:id="label6" alignment="CENTER" layoutX="3.0" layoutY="15.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+            </children>
+         </AnchorPane>
+         <AnchorPane layoutX="283.0" layoutY="230.0" onMouseClicked="#tile9" prefHeight="82.0" prefWidth="102.0">
             <children>
-               <Label fx:id="label9" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
-            </children></StackPane>
-            <StackPane layoutX="169.0" layoutY="140.0" onMouseClicked="#tile5" prefHeight="89.0" prefWidth="108.0">
+               <Label fx:id="label9" alignment="CENTER" layoutX="3.0" layoutY="11.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+            </children>
+         </AnchorPane>
+         <AnchorPane layoutX="169.0" layoutY="140.0" onMouseClicked="#tile5" prefHeight="82.0" prefWidth="102.0">
             <children>
-               <Label fx:id="label5" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
-            </children></StackPane>
-            <StackPane layoutX="283.0" layoutY="45.0" onMouseClicked="#tile3" prefHeight="89.0" prefWidth="108.0">
+               <Label fx:id="label5" alignment="CENTER" layoutX="3.0" layoutY="14.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+            </children>
+         </AnchorPane>
+         <AnchorPane layoutX="286.0" layoutY="61.0" onMouseClicked="#tile3" prefHeight="71.0" prefWidth="95.0">
             <children>
-               <Label fx:id="label3" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
-            </children></StackPane>
-            <StackPane layoutX="169.0" layoutY="45.0" onMouseClicked="#tile2" prefHeight="89.0" prefWidth="108.0">
+               <Label fx:id="label3" alignment="CENTER" layoutY="14.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+            </children>
+         </AnchorPane>
+         <AnchorPane layoutX="172.0" layoutY="61.0" onMouseClicked="#tile2" prefHeight="71.0" prefWidth="102.0">
             <children>
-               <Label fx:id="label2" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
-            </children></StackPane>
-            <StackPane layoutX="54.0" layoutY="140.0" onMouseClicked="#tile4" prefHeight="89.0" prefWidth="108.0">
+               <Label fx:id="label2" alignment="CENTER" layoutX="3.0" layoutY="14.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+            </children>
+         </AnchorPane>
+         <AnchorPane layoutX="57.0" layoutY="140.0" onMouseClicked="#tile4" prefHeight="82.0" prefWidth="102.0">
             <children>
-               <Label fx:id="label4" alignment="CENTER" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
-            </children></StackPane>
-            <Line endX="-112.5999755859375" endY="251.0" layoutX="395.0" layoutY="60.0" startX="-112.59999084472656" startY="-1.52587890625E-5" />
+               <Label fx:id="label4" alignment="CENTER" layoutX="3.0" layoutY="14.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+            </children>
+         </AnchorPane>
+         <Line fx:id="line4" endX="157.79998779296875" endY="266.20001220703125" layoutX="215.0" layoutY="34.0" opacity="0.0" startX="-141.40000915527344" startY="37.99998474121094" />
+         <Line fx:id="line1" endX="373.507080078125" endY="103.80000305175781" opacity="0.0" startX="68.00001525878906" startY="103.80000305175781" />
+         <Line fx:id="line6" endX="104.5999755859375" endY="300.20001220703125" opacity="0.0" startX="108.5999755859375" startY="71.99998474121094" />
+         <Line fx:id="line8" endX="333.5999755859375" endY="300.20001220703125" opacity="0.0" startX="333.5999755859375" startY="74.99998474121094" />
+         <Line fx:id="line2" endX="370.507080078125" endY="191.09999084472656" layoutX="3.0" layoutY="-5.0" opacity="0.0" startX="69.80000305175781" startY="191.09999084472656" />
+         <Line fx:id="line5" endX="175.79998779296875" endY="41.99998474121094" layoutX="197.0" layoutY="33.0" opacity="0.0" startX="-124.99998474121094" startY="258.79998779296875" />
         </children>
     </AnchorPane>
 </AnchorPane>
