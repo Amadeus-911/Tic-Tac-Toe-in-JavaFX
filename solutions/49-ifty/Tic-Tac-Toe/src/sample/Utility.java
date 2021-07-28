@@ -72,17 +72,55 @@ public final class Utility {
                                      Label label6, Label label7, Label label8, Label label9){
 
 //            winning combos = [1,2,3],[4,5,6],[7,8,9],[1,5,9],[3,5,7],[1,4,7],[2,5,8],[3,6,9]
+        String dot = String.valueOf('.');
+        boolean condition1 = (label1.getText().equals(label2.getText()) && label2.getText().equals(label3.getText()) && !label1.getText().equals(dot));
+        boolean condition2 = (label4.getText().equals(label5.getText()) && label5.getText().equals(label6.getText()) && !label4.getText().equals(dot));
+        boolean condition3 = (label7.getText().equals(label8.getText()) && label8.getText().equals(label9.getText()) && !label7.getText().equals(dot));
+        boolean condition4 = (label1.getText().equals(label5.getText()) && label5.getText().equals(label9.getText()) && !label1.getText().equals(dot));
+        boolean condition5 = (label3.getText().equals(label5.getText()) && label5.getText().equals(label7.getText()) && !label3.getText().equals(dot));
+        boolean condition6 = (label1.getText().equals(label4.getText()) && label4.getText().equals(label7.getText()) && !label1.getText().equals(dot));
+        boolean condition7 = (label2.getText().equals(label5.getText()) && label5.getText().equals(label8.getText()) && !label2.getText().equals(dot));
+        boolean condition8 = (label3.getText().equals(label6.getText()) && label6.getText().equals(label9.getText()) && !label3.getText().equals(dot));
 
-        boolean condition1 = (label1.getText().equals(label2.getText()) && label2.getText().equals(label3.getText()));
-        boolean condition2 = (label4.getText().equals(label5.getText()) && label5.getText().equals(label6.getText()));
-        boolean condition3 = (label7.getText().equals(label8.getText()) && label8.getText().equals(label9.getText()));
-        boolean condition4 = (label1.getText().equals(label5.getText()) && label5.getText().equals(label9.getText()));
-        boolean condition5 = (label3.getText().equals(label5.getText()) && label5.getText().equals(label7.getText()));
-        boolean condition6 = (label1.getText().equals(label4.getText()) && label4.getText().equals(label7.getText()));
-        boolean condition7 = (label2.getText().equals(label5.getText()) && label5.getText().equals(label8.getText()));
-        boolean condition8 = (label3.getText().equals(label6.getText()) && label6.getText().equals(label9.getText()));
-
-
+        return condition1 || condition2 || condition3 || condition4 || condition5 || condition6 || condition7 || condition8;
     }
 
+    public static int getCombo(Label label1, Label label2, Label label3, Label label4, Label label5,
+                               Label label6, Label label7, Label label8, Label label9){
+        String dot = String.valueOf('.');
+        boolean condition1 = (label1.getText().equals(label2.getText()) && label2.getText().equals(label3.getText()) && !label1.getText().equals(dot));
+        boolean condition2 = (label4.getText().equals(label5.getText()) && label5.getText().equals(label6.getText()) && !label4.getText().equals(dot));
+        boolean condition3 = (label7.getText().equals(label8.getText()) && label8.getText().equals(label9.getText()) && !label7.getText().equals(dot));
+        boolean condition4 = (label1.getText().equals(label5.getText()) && label5.getText().equals(label9.getText()) && !label1.getText().equals(dot));
+        boolean condition5 = (label3.getText().equals(label5.getText()) && label5.getText().equals(label7.getText()) && !label3.getText().equals(dot));
+        boolean condition6 = (label1.getText().equals(label4.getText()) && label4.getText().equals(label7.getText()) && !label1.getText().equals(dot));
+        boolean condition7 = (label2.getText().equals(label5.getText()) && label5.getText().equals(label8.getText()) && !label2.getText().equals(dot));
+        boolean condition8 = (label3.getText().equals(label6.getText()) && label6.getText().equals(label9.getText()) && !label3.getText().equals(dot));
+
+        if(condition1){
+            return 1;
+        }
+        if(condition2){
+            return 2;
+        }
+        if(condition3){
+            return 3;
+        }
+        if(condition4){
+            return 4;
+        }
+        if(condition5){
+            return 5;
+        }
+        if(condition6){
+            return 6;
+        }
+        if(condition7){
+            return 7;
+        }
+        if(condition8){
+            return 8;
+        }
+        return 0;
+    }
 }
