@@ -1,15 +1,19 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import javafx.scene.control.Label;
 import javafx.scene.shape.Line;
 
 import static sample.Utility.*;
+import static sample.Window.*;
 
 public class Controller {
 
     private final String X = "X";
+    private final String win = "You have won";
+    private final String lose = "You lost";
     private boolean turnX = true;
     Player player = new Player();
     AI ai = new AI();
@@ -23,6 +27,7 @@ public class Controller {
     @FXML protected Label label7;
     @FXML protected Label label8;
     @FXML protected Label label9;
+
 
     @FXML private Line line1;
     @FXML private Line line2;
@@ -88,6 +93,7 @@ public class Controller {
                     turnX = false;
                     if(isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)){
                         drawGameOverLine();
+                        gameWinnerDisplay(win);
                         return;
                     }
                     int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
@@ -121,9 +127,11 @@ public class Controller {
                             break;
                         default:
                             System.out.println("default");
+
                     }
                     if(isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)){
                         drawGameOverLine();
+                        gameWinnerDisplay(lose);
                         return;
                     }
                     turnX = true;
@@ -149,6 +157,7 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(win);
                         return;
                     }
                     int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
@@ -186,6 +195,7 @@ public class Controller {
                     }
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(lose);
                         return;
                     }
                     turnX = true;
@@ -209,6 +219,7 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(win);
                         return;
                     }
                     int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
@@ -246,6 +257,7 @@ public class Controller {
                     }
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(lose);
                         return;
                     }
                     turnX = true;
@@ -263,6 +275,7 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(win);
                         return;
                     }
                     int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
@@ -300,6 +313,7 @@ public class Controller {
                     }
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(lose);
                         return;
                     }
                     turnX = true;
@@ -323,6 +337,7 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(win);
                         return;
                     }
                     int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
@@ -361,6 +376,7 @@ public class Controller {
                     }
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(lose);
                         return;
                     }
                     turnX = true;
@@ -384,6 +400,7 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(win);
                         return;
                     }
                     int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
@@ -422,6 +439,7 @@ public class Controller {
                     }
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(lose);
                         return;
                     }
                     turnX = true;
@@ -445,6 +463,7 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(win);
                         return;
                     }
                     int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
@@ -483,6 +502,7 @@ public class Controller {
                     }
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(lose);
                         return;
                     }
                     turnX = true;
@@ -506,6 +526,7 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(win);
                         return;
                     }
                     int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
@@ -543,6 +564,7 @@ public class Controller {
                     }
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(lose);
                         return;
                     }
                     turnX = true;
@@ -566,6 +588,7 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(win);
                         return;
                     }
                     int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
@@ -603,6 +626,7 @@ public class Controller {
                     }
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
+                        gameWinnerDisplay(lose);
                         return;
                     }
                     turnX = true;

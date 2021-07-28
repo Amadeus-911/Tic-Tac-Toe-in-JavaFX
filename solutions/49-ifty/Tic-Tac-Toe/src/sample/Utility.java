@@ -2,7 +2,8 @@ package sample;
 
 import javafx.scene.control.Label;
 
-import java.util.Random;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public final class Utility {
     public static int rand(){
@@ -11,6 +12,8 @@ public final class Utility {
         int high = 10;
         return r.nextInt(high-low) + low;
     }
+
+
 
     public static boolean isEmpty(Label label){
         String val = label.getText();

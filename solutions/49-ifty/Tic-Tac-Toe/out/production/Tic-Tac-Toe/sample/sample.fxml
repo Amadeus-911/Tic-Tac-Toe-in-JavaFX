@@ -37,6 +37,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
@@ -56,9 +57,12 @@
             <Glow level="1.0" />
         </effect>
     </Button>
-    <RadioButton layoutX="542.0" layoutY="105.0" mnemonicParsing="false" text="Classic" />
-    <RadioButton layoutX="542.0" layoutY="135.0" mnemonicParsing="false" text="Forest" />
-    <RadioButton layoutX="542.0" layoutY="165.0" mnemonicParsing="false" text="High Contrast" />
+    <RadioButton layoutX="542.0" layoutY="105.0" mnemonicParsing="false" text="Classic">
+      <toggleGroup>
+         <ToggleGroup fx:id="theme" />
+      </toggleGroup></RadioButton>
+    <RadioButton layoutX="542.0" layoutY="135.0" mnemonicParsing="false" text="Forest" toggleGroup="$theme" />
+    <RadioButton layoutX="542.0" layoutY="165.0" mnemonicParsing="false" text="High Contrast" toggleGroup="$theme" />
     <Label layoutX="541.0" layoutY="58.0" prefHeight="46.0" prefWidth="150.0" style="-fx-font-size: 30;" text="Theme" />
     <AnchorPane prefHeight="400.0" prefWidth="472.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="274.0" AnchorPane.topAnchor="0.0">
         <children>
