@@ -77,7 +77,7 @@
                <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="14.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children>
          </AnchorPane>
-         <AnchorPane layoutX="169.0" layoutY="230.0" onMouseClicked="#tile8" prefHeight="74.0" prefWidth="102.0">
+         <AnchorPane layoutX="161.0" layoutY="230.0" onMouseClicked="#tile8" prefHeight="74.0" prefWidth="118.0">
             <children>
                <Label fx:id="label8" alignment="CENTER" layoutX="7.0" layoutY="11.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children>
@@ -99,7 +99,7 @@
          </AnchorPane>
          <AnchorPane layoutX="161.0" layoutY="140.0" onMouseClicked="#tile5" prefHeight="90.0" prefWidth="118.0">
             <children>
-               <Label fx:id="label5" alignment="CENTER" layoutX="14.0" layoutY="11.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
+               <Label fx:id="label5" alignment="CENTER" layoutX="14.0" layoutY="11.0" opacity="0.0" prefHeight="66.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children>
          </AnchorPane>
          <AnchorPane layoutX="286.0" layoutY="61.0" onMouseClicked="#tile3" prefHeight="71.0" prefWidth="95.0">
@@ -107,7 +107,7 @@
                <Label fx:id="label3" alignment="CENTER" layoutY="14.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children>
          </AnchorPane>
-         <AnchorPane layoutX="172.0" layoutY="61.0" onMouseClicked="#tile2" prefHeight="71.0" prefWidth="102.0">
+         <AnchorPane layoutX="164.0" layoutY="61.0" onMouseClicked="#tile2" prefHeight="74.0" prefWidth="118.0">
             <children>
                <Label fx:id="label2" alignment="CENTER" layoutX="3.0" layoutY="14.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />
             </children>

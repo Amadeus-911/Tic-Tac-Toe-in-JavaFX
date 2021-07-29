@@ -84,16 +84,6 @@ public class Controller {
 
     public void tile1(){
         System.out.println("Hello I'm Tile 1");
-//        if(turnX){
-//            draw.drawX();
-//            if(val.equals(X)){
-//                turnX = false;
-//            }
-//        }else{
-//            if(!val.equals(X)){
-//                draw.drawO();
-//            }
-//        }
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)){
 
             if(isEmpty(label1)){
@@ -140,7 +130,7 @@ public class Controller {
                     }
                     if(isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)){
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(win);}
+                        if(!isTie){gameWinnerDisplay(lose);}
                         return;
                     }
                     turnX = true;
@@ -204,7 +194,7 @@ public class Controller {
                     }
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(win);}
+                        if(!isTie){gameWinnerDisplay(lose);}
                         return;
                     }
                     turnX = true;
