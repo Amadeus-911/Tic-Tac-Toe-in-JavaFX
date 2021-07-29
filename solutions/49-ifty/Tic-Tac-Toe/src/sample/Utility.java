@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.scene.control.Label;
+import javafx.scene.shape.Line;
 
 import java.lang.reflect.Array;
 import java.util.*;
@@ -15,16 +16,42 @@ public final class Utility {
         return r.nextInt(high-low) + low;
     }
 
+    public static void clean(Label label1, Label label2, Label label3, Label label4, Label label5,
+                             Label label6, Label label7, Label label8, Label label9, Line line1, Line line2,Line line3,
+                             Line line4,Line line5,Line line6,Line line7,Line line8){
+        line1.setOpacity(0);
+        line2.setOpacity(0);
+        line3.setOpacity(0);
+        line4.setOpacity(0);
+        line5.setOpacity(0);
+        line6.setOpacity(0);
+        line7.setOpacity(0);
+        line8.setOpacity(0);
 
+        label1.setText(".");
+        label1.setOpacity(0);
+        label2.setText(".");
+        label2.setOpacity(0);
+        label3.setText(".");
+        label3.setOpacity(0);
+        label4.setText(".");
+        label4.setOpacity(0);
+        label5.setText(".");
+        label5.setOpacity(0);
+        label6.setText(".");
+        label6.setOpacity(0);
+        label7.setText(".");
+        label7.setOpacity(0);
+        label8.setText(".");
+        label8.setOpacity(0);
+        label9.setText(".");
+        label9.setOpacity(0);
+    }
 
     public static boolean isEmpty(Label label){
         String val = label.getText();
         String nan = String.valueOf('.');
-        if(val.equals(nan)){
-            return true;
-        }else{
-            return false;
-        }
+        return val.equals(nan);
     }
 
     public static int randomTile(Label label1, Label label2, Label label3, Label label4, Label label5,
@@ -69,9 +96,6 @@ public final class Utility {
                     return 9;
                 }
             default:
-//                String dot = String.valueOf('.');
-//                if((isEmpty(label1) && isEmpty(label2) && isEmpty(label3) && isEmpty(label4) && isEmpty(label5) && isEmpty(label6)
-//                        &&isEmpty(label7) &&isEmpty(label8) && isEmpty(label9) && !label1.getText().equals(dot)))
                 return randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
 
         }

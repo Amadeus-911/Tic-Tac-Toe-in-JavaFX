@@ -1,6 +1,4 @@
 package sample;
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import javafx.scene.control.Label;
@@ -17,6 +15,7 @@ public class Controller {
     private  final String tie = "The game is Tied";
     private boolean turnX = true;
     private boolean isTie = false;
+    private boolean isPlayable = true;
     Player player = new Player();
     AI ai = new AI();
 
@@ -40,10 +39,11 @@ public class Controller {
     @FXML private Line line7;
     @FXML private Line line8;
 
-    public void initDefault(){
-
+    public void reset(){
+        turnX = true;
+        isTie = false;
+        clean(label1, label2, label3, label4, label5, label6, label7, label8, label9, line1,line2,line3,line4,line5,line6,line7,line8);
     }
-
 
     public void drawGameOverLine(){
         int combo = getCombo(label1, label2, label3, label4, label5, label6, label7, label8, label9);

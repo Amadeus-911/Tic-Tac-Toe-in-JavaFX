@@ -6,7 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+import java.io.IOException;
+
+public class Game extends Application {
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{
