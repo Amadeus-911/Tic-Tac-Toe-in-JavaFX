@@ -54,51 +54,72 @@ public final class Utility {
         return val.equals(nan);
     }
 
-    public static int randomTile(Label label1, Label label2, Label label3, Label label4, Label label5,
+    public static Label randomTile(Label label1, Label label2, Label label3, Label label4, Label label5,
                                  Label label6, Label label7, Label label8, Label label9){
         int tile = 0;
         tile = rand();
-        switch (tile){
-            case 1:
-                if(isEmpty(label1)){
-                    return 1;
-                }
-            case 2:
-                if(isEmpty(label2)){
-                    return 2;
-                }
-            case 3:
-                if(isEmpty(label3)){
-                    return 3;
-                }
-            case 4:
-                if(isEmpty(label4)){
-                    return 4;
-                }
-            case 5:
-                if(isEmpty(label5)){
-                    return 5;
-                }
-            case 6:
-                if(isEmpty(label6)){
-                    return 6;
-                }
-            case 7:
-                if(isEmpty(label7)){
-                    return 7;
-                }
-            case 8:
-                if(isEmpty(label8)){
-                    return 8;
-                }
-            case 9:
-                if(isEmpty(label9)) {
-                    return 9;
-                }
-            default:
-                return randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
 
+        HashMap<Integer,Label> myMap = new HashMap<>();
+        myMap.put(1,label1);
+        myMap.put(2,label2);
+        myMap.put(3,label3);
+        myMap.put(4,label4);
+        myMap.put(5,label5);
+        myMap.put(6,label6);
+        myMap.put(7,label7);
+        myMap.put(8,label8);
+        myMap.put(9,label9);
+
+
+        Label newTile = myMap.get(tile);
+
+        if(isEmpty(newTile)){
+            return newTile;
+        }else{
+            return randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
         }
+
+//        switch (tile){
+//            case 1:
+//                if(isEmpty(label1)){
+//                    return 1;
+//                }
+//            case 2:
+//                if(isEmpty(label2)){
+//                    return 2;
+//                }
+//            case 3:
+//                if(isEmpty(label3)){
+//                    return 3;
+//                }
+//            case 4:
+//                if(isEmpty(label4)){
+//                    return 4;
+//                }
+//            case 5:
+//                if(isEmpty(label5)){
+//                    return 5;
+//                }
+//            case 6:
+//                if(isEmpty(label6)){
+//                    return 6;
+//                }
+//            case 7:
+//                if(isEmpty(label7)){
+//                    return 7;
+//                }
+//            case 8:
+//                if(isEmpty(label8)){
+//                    return 8;
+//                }
+//            case 9:
+//                if(isEmpty(label9)) {
+//                    return 9;
+//                }
+//            default:
+//                return randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
+//
+//        }
    }
     public static boolean isGameOver(Label label1, Label label2, Label label3, Label label4, Label label5,
                                      Label label6, Label label7, Label label8, Label label9){

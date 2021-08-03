@@ -17,7 +17,6 @@ public class Controller {
     private boolean isTie = false;
     private boolean isPlayable = true;
     Player player = new Player();
-    AI ai = new AI();
     Random_Ai randomAi = new Random_Ai();
 
     @FXML protected Label label1;
