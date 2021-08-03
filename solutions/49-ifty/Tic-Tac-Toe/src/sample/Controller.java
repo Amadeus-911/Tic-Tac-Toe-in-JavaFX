@@ -99,39 +99,7 @@ public class Controller {
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    System.out.println(tile);
-//                    switch (tile){
-//                        case 1:
-//                            System.out.println("do noting");
-//                        case 2:
-//                            ai.drawO(label2);
-//                            break;
-//                        case 3:
-//                            ai.drawO(label3);
-//                            break;
-//                        case 4:
-//                            ai.drawO(label4);
-//                            break;
-//                        case 5:
-//                            ai.drawO(label5);
-//                            break;
-//                        case 6:
-//                            ai.drawO(label6);
-//                            break;
-//                        case 7:
-//                            ai.drawO(label7);
-//                            break;
-//                        case 8:
-//                            ai.drawO(label8);
-//                            break;
-//                        case 9:
-//                            ai.drawO(label9);
-//                            break;
-//                        default:
-//                            System.out.println("default");
 
-                    //}
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
                         if (!isTie) {
@@ -165,39 +133,7 @@ public class Controller {
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    System.out.println(tile);
-//                    switch (tile) {
-//                        case 1:
-//                            ai.drawO(label1);
-//                            break;
-//                        case 2:
-//                            System.out.println("do noting");
-//                        case 3:
-//                            ai.drawO(label3);
-//                            break;
-//                        case 4:
-//                            ai.drawO(label4);
-//                            break;
-//                        case 5:
-//                            ai.drawO(label5);
-//                            break;
-//                        case 6:
-//                            ai.drawO(label6);
-//                            break;
-//                        case 7:
-//                            ai.drawO(label7);
-//                            break;
-//                        case 8:
-//                            ai.drawO(label8);
-//                            break;
-//                        case 9:
-//                            ai.drawO(label9);
-//                            break;
-//                        default:
-//                            System.out.println("default");
-//                            break;
-//                    }
+
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
                         if(!isTie){gameWinnerDisplay(lose);}
@@ -211,12 +147,7 @@ public class Controller {
         }
     }
     public void  tile3(){
-//        System.out.println("Hello I'm Tile 3");
-//        Draw draw = new Draw(label3);
-//        if(turnX){
-//            draw.drawX();
-//            turnX = false;
-//        }
+
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label3)) {
                 if (turnX) {
@@ -228,39 +159,7 @@ public class Controller {
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    System.out.println(tile);
-//                    switch (tile) {
-//                        case 1:
-//                            ai.drawO(label1);
-//                            break;
-//                        case 2:
-//                            ai.drawO(label2);
-//                            break;
-//                        case 3:
-//                            System.out.println("do noting");
-//                        case 4:
-//                            ai.drawO(label4);
-//                            break;
-//                        case 5:
-//                            ai.drawO(label5);
-//                            break;
-//                        case 6:
-//                            ai.drawO(label6);
-//                            break;
-//                        case 7:
-//                            ai.drawO(label7);
-//                            break;
-//                        case 8:
-//                            ai.drawO(label8);
-//                            break;
-//                        case 9:
-//                            ai.drawO(label9);
-//                            break;
-//                        default:
-//                            System.out.println("default");
-//                            break;
-//                    }
+
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
                         if(!isTie){gameWinnerDisplay(lose);}
@@ -285,39 +184,7 @@ public class Controller {
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    System.out.println(tile);
-//                    switch (tile) {
-//                        case 1:
-//                            ai.drawO(label1);
-//                            break;
-//                        case 2:
-//                            ai.drawO(label2);
-//                            break;
-//                        case 3:
-//                            ai.drawO(label3);
-//                            break;
-//                        case 4:
-//                            System.out.println("do noting");
-//                        case 5:
-//                            ai.drawO(label5);
-//                            break;
-//                        case 6:
-//                            ai.drawO(label6);
-//                            break;
-//                        case 7:
-//                            ai.drawO(label7);
-//                            break;
-//                        case 8:
-//                            ai.drawO(label8);
-//                            break;
-//                        case 9:
-//                            ai.drawO(label9);
-//                            break;
-//                        default:
-//                            System.out.println("default");
-//                            break;
-//                    }
+
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
                         if(!isTie){gameWinnerDisplay(lose);}
@@ -332,11 +199,7 @@ public class Controller {
     }
     public void  tile5(){
         System.out.println("Hello I'm Tile 5");
-//        Draw draw = new Draw(label5);
-//        if(turnX){
-//            draw.drawX();
-//            turnX = false;
-//        }
+
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label5)) {
                 if (turnX) {
@@ -348,40 +211,7 @@ public class Controller {
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    System.out.println(tile);
-//                    switch (tile) {
-//                        case 1:
-//                            ai.drawO(label1);
-//                            break;
-//
-//                        case 2:
-//                            ai.drawO(label2);
-//                            break;
-//                        case 3:
-//                            ai.drawO(label3);
-//                            break;
-//                        case 4:
-//                            ai.drawO(label4);
-//                            break;
-//                        case 5:
-//                            System.out.println("do noting");
-//                        case 6:
-//                            ai.drawO(label6);
-//                            break;
-//                        case 7:
-//                            ai.drawO(label7);
-//                            break;
-//                        case 8:
-//                            ai.drawO(label8);
-//                            break;
-//                        case 9:
-//                            ai.drawO(label9);
-//                            break;
-//                        default:
-//                            System.out.println("default");
-//                            break;
-//                    }
+
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
                         if(!isTie){gameWinnerDisplay(lose);}
@@ -396,11 +226,7 @@ public class Controller {
     }
     public void  tile6(){
         System.out.println("Hello I'm Tile 6");
-//        Draw draw = new Draw(label6);
-//        if(turnX){
-//            draw.drawX();
-//            turnX = false;
-//        }
+
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label6)) {
                 if (turnX) {
@@ -412,40 +238,7 @@ public class Controller {
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    System.out.println(tile);
-//                    switch (tile) {
-//                        case 1:
-//                            ai.drawO(label1);
-//                            break;
-//
-//                        case 2:
-//                            ai.drawO(label2);
-//                            break;
-//                        case 3:
-//                            ai.drawO(label3);
-//                            break;
-//                        case 4:
-//                            ai.drawO(label4);
-//                            break;
-//                        case 5:
-//                            ai.drawO(label5);
-//                            break;
-//                        case 6:
-//                            System.out.println("do noting");
-//                        case 7:
-//                            ai.drawO(label7);
-//                            break;
-//                        case 8:
-//                            ai.drawO(label8);
-//                            break;
-//                        case 9:
-//                            ai.drawO(label9);
-//                            break;
-//                        default:
-//                            System.out.println("default");
-//                            break;
-//                    }
+
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
                         if(!isTie){gameWinnerDisplay(lose);}
@@ -460,11 +253,7 @@ public class Controller {
     }
     public void  tile7(){
         System.out.println("Hello I'm Tile 7");
-//        Draw draw = new Draw(label7);
-//        if(turnX){
-//            draw.drawX();
-//            turnX = false;
-//        }
+
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label7)) {
                 if (turnX) {
@@ -476,40 +265,7 @@ public class Controller {
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    System.out.println(tile);
-//                    switch (tile) {
-//                        case 1:
-//                            ai.drawO(label1);
-//                            break;
-//
-//                        case 2:
-//                            ai.drawO(label2);
-//                            break;
-//                        case 3:
-//                            ai.drawO(label3);
-//                            break;
-//                        case 4:
-//                            ai.drawO(label4);
-//                            break;
-//                        case 5:
-//                            ai.drawO(label5);
-//                            break;
-//                        case 6:
-//                            ai.drawO(label6);
-//                            break;
-//                        case 7:
-//                            System.out.println("do noting");
-//                        case 8:
-//                            ai.drawO(label8);
-//                            break;
-//                        case 9:
-//                            ai.drawO(label9);
-//                            break;
-//                        default:
-//                            System.out.println("default");
-//                            break;
-//                    }
+
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
                         if(!isTie){gameWinnerDisplay(lose);}
@@ -524,11 +280,7 @@ public class Controller {
     }
     public void  tile8(){
         System.out.println("Hello I'm Tile 8");
-//        Draw draw = new Draw(label8);
-//        if(turnX){
-//            draw.drawX();
-//            turnX = false;
-//        }
+
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label8)) {
                 if (turnX) {
@@ -540,39 +292,7 @@ public class Controller {
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    System.out.println(tile);
-//                    switch (tile) {
-//                        case 1:
-//                            ai.drawO(label1);
-//                            break;
-//                        case 2:
-//                            ai.drawO(label2);
-//                            break;
-//                        case 3:
-//                            ai.drawO(label3);
-//                            break;
-//                        case 4:
-//                            ai.drawO(label4);
-//                            break;
-//                        case 5:
-//                            ai.drawO(label5);
-//                            break;
-//                        case 6:
-//                            ai.drawO(label6);
-//                            break;
-//                        case 7:
-//                            ai.drawO(label7);
-//                            break;
-//                        case 8:
-//                            System.out.println("do noting");
-//                        case 9:
-//                            ai.drawO(label9);
-//                            break;
-//                        default:
-//                            System.out.println("default");
-//                            break;
-//                    }
+
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
                         if(!isTie){gameWinnerDisplay(lose);}
@@ -587,11 +307,7 @@ public class Controller {
     }
     public void  tile9(){
         System.out.println("Hello I'm Tile 9");
-//        Draw draw = new Draw(label9);
-//        if(turnX){
-//            draw.drawX();
-//            turnX = false;
-//        }
+
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label9)) {
                 if (turnX) {
@@ -603,39 +319,7 @@ public class Controller {
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    int tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//                    System.out.println(tile);
-//                    switch (tile) {
-//                        case 1:
-//                            ai.drawO(label9);
-//                            break;
-//                        case 2:
-//                            ai.drawO(label2);
-//                            break;
-//                        case 3:
-//                            ai.drawO(label3);
-//                            break;
-//                        case 4:
-//                            ai.drawO(label4);
-//                            break;
-//                        case 5:
-//                            ai.drawO(label5);
-//                            break;
-//                        case 6:
-//                            ai.drawO(label6);
-//                            break;
-//                        case 7:
-//                            ai.drawO(label7);
-//                            break;
-//                        case 8:
-//                            ai.drawO(label8);
-//                            break;
-//                        case 9:
-//                            System.out.println("do noting");
-//                        default:
-//                            System.out.println("default");
-//                            break;
-//                    }
+
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
                         if(!isTie){gameWinnerDisplay(lose);}
