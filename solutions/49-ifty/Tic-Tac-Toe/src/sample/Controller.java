@@ -16,6 +16,7 @@ public class Controller {
     private boolean turnX = true;
     private boolean isTie = false;
     private boolean isPlayable = true;
+
     Player player = new Player();
     Random_Ai randomAi = new Random_Ai();
 

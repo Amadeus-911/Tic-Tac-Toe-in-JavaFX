@@ -9,6 +9,9 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+
+//TO DO Refactor this class
+
 public class Window {
     public static void gameWinnerDisplay(String msg){
         Stage window = new Stage();
