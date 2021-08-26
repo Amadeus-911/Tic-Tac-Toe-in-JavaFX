@@ -75,7 +75,7 @@ public class Controller {
                 break;
             case 0:
                 isTie = true;
-                gameWinnerDisplay(tie);
+                endGameMsg(tie);
             default:
                 System.out.println("no game");
         }
@@ -94,7 +94,7 @@ public class Controller {
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
                         if (!isTie) {
-                            gameWinnerDisplay(win);
+                            endGameMsg(win);
                         }
                         return;
                     }
@@ -103,7 +103,7 @@ public class Controller {
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
                         if (!isTie) {
-                            gameWinnerDisplay(lose);
+                            endGameMsg(lose);
                         }
                         return;
                     }
@@ -129,14 +129,14 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(win);}
+                        if(!isTie){endGameMsg(win);}
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(lose);}
+                        if(!isTie){endGameMsg(lose);}
                         return;
                     }
                     turnX = true;
@@ -155,14 +155,14 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(win);}
+                        if(!isTie){endGameMsg(win);}
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(lose);}
+                        if(!isTie){endGameMsg(lose);}
                         return;
                     }
                     turnX = true;
@@ -180,14 +180,14 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(win);}
+                        if(!isTie){endGameMsg(win);}
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(lose);}
+                        if(!isTie){endGameMsg(lose);}
                         return;
                     }
                     turnX = true;
@@ -207,14 +207,14 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(win);}
+                        if(!isTie){endGameMsg(win);}
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(lose);}
+                        if(!isTie){endGameMsg(lose);}
                         return;
                     }
                     turnX = true;
@@ -234,14 +234,14 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(win);}
+                        if(!isTie){endGameMsg(win);}
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(lose);}
+                        if(!isTie){endGameMsg(lose);}
                         return;
                     }
                     turnX = true;
@@ -261,14 +261,14 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(win);}
+                        if(!isTie){endGameMsg(win);}
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(lose);}
+                        if(!isTie){endGameMsg(lose);}
                         return;
                     }
                     turnX = true;
@@ -288,14 +288,14 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(win);}
+                        if(!isTie){endGameMsg(win);}
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(lose);}
+                        if(!isTie){endGameMsg(lose);}
                         return;
                     }
                     turnX = true;
@@ -315,14 +315,14 @@ public class Controller {
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(win);}
+                        if(!isTie){endGameMsg(win);}
                         return;
                     }
                     randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
-                        if(!isTie){gameWinnerDisplay(lose);}
+                        if(!isTie){endGameMsg(lose);}
                         return;
                     }
                     turnX = true;
