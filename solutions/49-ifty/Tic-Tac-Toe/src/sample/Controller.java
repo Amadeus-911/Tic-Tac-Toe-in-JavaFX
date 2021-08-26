@@ -42,9 +42,7 @@ public class Controller {
         }
         else if(classic.isSelected()){
             theme.classic(background,boardLine1,boardLine2,boardLine3,boardLine4);
-
         }
-
     }
 
     @FXML protected Label label1;

@@ -32,7 +32,7 @@ public class Random_Ai extends AI{
 
 
         Label newTile = myMap.get(tile);
-
+        tiles.remove(Integer.valueOf(tile));
         return newTile;
     }
 
