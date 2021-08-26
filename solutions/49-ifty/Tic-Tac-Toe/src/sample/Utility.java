@@ -4,14 +4,14 @@ import javafx.scene.control.Label;
 import javafx.scene.shape.Line;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public final class Utility {
 
 
-    public static int rand(){
-
-        ArrayList<Integer> tiles = new ArrayList<Integer>();
+    public static List<Integer> createList(){
+        List<Integer> tiles = new ArrayList<>();
         tiles.add(1);
         tiles.add(2);
         tiles.add(3);
@@ -22,20 +22,22 @@ public final class Utility {
         tiles.add(8);
         tiles.add(9);
 
+        return tiles;
+    }
 
+    public static int rand(List<Integer> tiles){
 
-
-
-
-        Random r = new Random();
-        int low = 1;
-        int high = 10;
-        return r.nextInt(high-low) + low;
+        Random rand = new Random();
+        return tiles.get(rand.nextInt(tiles.size()));
+//        Random r = new Random();
+//        int low = 1;
+//        int high = 10;
+//        return r.nextInt(high-low) + low;
     }
 
     public static void clean(Label label1, Label label2, Label label3, Label label4, Label label5,
                              Label label6, Label label7, Label label8, Label label9, Line line1, Line line2,Line line3,
-                             Line line4,Line line5,Line line6,Line line7,Line line8){
+                             Line line4,Line line5,Line line6,Line line7,Line line8, List<Integer> tiles){
         line1.setOpacity(0);
         line2.setOpacity(0);
         line3.setOpacity(0);
@@ -63,6 +65,7 @@ public final class Utility {
         label8.setOpacity(0);
         label9.setText(".");
         label9.setOpacity(0);
+        tiles.clear();
     }
 
     public static boolean isEmpty(Label label){

@@ -3,16 +3,21 @@ package sample;
 import javafx.scene.control.Label;
 
 import java.util.HashMap;
+import java.util.List;
 
-import static sample.Utility.isEmpty;
 import static sample.Utility.rand;
 
 public class Random_Ai extends AI{
 
+
+
     public Label randomTile(Label label1, Label label2, Label label3, Label label4, Label label5,
-                                   Label label6, Label label7, Label label8, Label label9) {
+                                   Label label6, Label label7, Label label8, Label label9, List<Integer> tiles) {
+
+
+
         int tile = 0;
-        tile = rand();
+        tile = rand(tiles);
 
         HashMap<Integer, Label> myMap = new HashMap<>();
         myMap.put(1, label1);
@@ -28,19 +33,15 @@ public class Random_Ai extends AI{
 
         Label newTile = myMap.get(tile);
 
-        if (isEmpty(newTile)) {
-            return newTile;
-        } else {
-            return randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-        }
+        return newTile;
     }
 
 
 
     public void move(Label label1, Label label2, Label label3, Label label4, Label label5,
-                                Label label6, Label label7, Label label8, Label label9){
+                                Label label6, Label label7, Label label8, Label label9, List<Integer> tiles){
 
-        Label tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
+        Label tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9, tiles);
         drawO(tile);
     }
 
