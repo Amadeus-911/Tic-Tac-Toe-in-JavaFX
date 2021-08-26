@@ -3,13 +3,30 @@ package sample;
 import javafx.scene.control.Label;
 import javafx.scene.shape.Line;
 
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Random;
 
 public final class Utility {
 
 
     public static int rand(){
+
+        ArrayList<Integer> tiles = new ArrayList<Integer>();
+        tiles.add(1);
+        tiles.add(2);
+        tiles.add(3);
+        tiles.add(4);
+        tiles.add(5);
+        tiles.add(6);
+        tiles.add(7);
+        tiles.add(8);
+        tiles.add(9);
+
+
+
+
+
+
         Random r = new Random();
         int low = 1;
         int high = 10;
