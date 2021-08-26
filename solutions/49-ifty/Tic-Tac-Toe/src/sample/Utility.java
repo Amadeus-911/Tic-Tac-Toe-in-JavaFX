@@ -29,10 +29,7 @@ public final class Utility {
 
         Random rand = new Random();
         return tiles.get(rand.nextInt(tiles.size()));
-//        Random r = new Random();
-//        int low = 1;
-//        int high = 10;
-//        return r.nextInt(high-low) + low;
+
     }
 
     public static void clean(Label label1, Label label2, Label label3, Label label4, Label label5,
