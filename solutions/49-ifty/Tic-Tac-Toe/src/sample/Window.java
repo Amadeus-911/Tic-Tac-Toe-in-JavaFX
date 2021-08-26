@@ -13,7 +13,19 @@ import javafx.stage.Stage;
 //TO DO Refactor this class
 
 public class Window {
-    public static void gameWinnerDisplay(String msg){
+    public static void endGameMsg(String msg){
+
+        Stage window = createWinddow();
+
+        VBox layout = createVboxLayout(window,msg);
+
+        Scene scene = new Scene(layout);
+        window.setScene(scene);
+        window.showAndWait();
+
+    }
+
+    private static Stage createWinddow() {
         Stage window = new Stage();
         window.initModality(Modality.APPLICATION_MODAL);
 
@@ -21,6 +33,10 @@ public class Window {
         window.setMinWidth(250);
         window.setMinHeight(100);
 
+        return window;
+    }
+
+    private static VBox createVboxLayout(Stage window,String msg){
         Label label = new Label();
         label.setText(msg);
         Button okButton = new Button("OK");
@@ -30,8 +46,8 @@ public class Window {
         layout.getChildren().addAll(label, okButton);
         layout.setAlignment(Pos.CENTER);
 
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        window.showAndWait();
+        return layout;
     }
+    
 }
+
