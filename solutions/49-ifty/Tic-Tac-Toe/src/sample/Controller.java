@@ -2,6 +2,8 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Line;
 
 import java.util.List;
@@ -23,6 +25,15 @@ public class Controller {
     Random_Ai randomAi = new Random_Ai();
 
     public List<Integer> tiles = createList();
+
+    @FXML protected AnchorPane background;
+    @FXML protected RadioButton forest;
+
+    public void changeTheme(){
+        if(forest.isSelected()){
+        background.setStyle("-fx-background-color: lightgreen");
+        }
+    }
 
     @FXML protected Label label1;
     @FXML protected Label label2;
@@ -118,7 +129,8 @@ public class Controller {
             } else {
                 System.out.println("Not empty");
             }
-        }}
+        }
+    }
 
 
     public void  tile2(){
