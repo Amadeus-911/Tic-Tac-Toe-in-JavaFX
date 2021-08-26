@@ -57,7 +57,7 @@
             <Glow level="1.0" />
         </effect>
     </Button>
-    <RadioButton layoutX="542.0" layoutY="105.0" mnemonicParsing="false" text="Classic">
+    <RadioButton fx:id="classic" layoutX="542.0" layoutY="105.0" mnemonicParsing="false" onAction="#changeTheme" text="Classic">
       <toggleGroup>
          <ToggleGroup fx:id="theme" />
       </toggleGroup></RadioButton>
@@ -66,12 +66,12 @@
     <Label layoutX="541.0" layoutY="58.0" prefHeight="46.0" prefWidth="150.0" style="-fx-font-size: 30;" text="Theme" />
     <AnchorPane prefHeight="400.0" prefWidth="472.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="274.0" AnchorPane.topAnchor="0.0">
         <children>
-            <Line endX="-112.5999755859375" endY="251.0" layoutX="395.0" layoutY="60.0" startX="-112.59999084472656" startY="-1.52587890625E-5" />
-            <Line endX="408.4999694824219" endY="234.1999969482422" layoutX="-26.0" layoutY="-5.0" startX="90.89999389648438" startY="234.1999969482422" />
-            <Line endX="-160.80001831054688" endY="249.79998779296875" layoutX="322.0" layoutY="60.0" startX="-160.8000030517578" />
+            <Line fx:id="boardLine2" endX="-112.5999755859375" endY="251.0" layoutX="395.0" layoutY="60.0" startX="-112.59999084472656" startY="-1.52587890625E-5" />
+            <Line fx:id="boardLine4" endX="408.4999694824219" endY="234.1999969482422" layoutX="-26.0" layoutY="-5.0" startX="90.89999389648438" startY="234.1999969482422" />
+            <Line fx:id="boardLine1" endX="-160.80001831054688" endY="249.79998779296875" layoutX="322.0" layoutY="60.0" startX="-160.8000030517578" />
          <Line fx:id="line3" endX="373.69287109375" endY="270.6000061035156" opacity="0.0" startX="70.49285888671875" startY="270.6000061035156" />
          <Line fx:id="line7" endX="223.2928466796875" endY="297.4000244140625" opacity="0.0" startX="223.29286193847656" startY="79.80000305175781" />
-            <Line endX="164.0" layoutX="221.0" layoutY="139.0" startX="-160.8000030517578" />
+            <Line fx:id="boardLine3" endX="164.0" layoutX="221.0" layoutY="139.0" startX="-160.8000030517578" />
          <AnchorPane layoutX="54.0" layoutY="58.0" onMouseClicked="#tile1" prefHeight="82.0" prefWidth="102.0">
             <children>
                <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="14.0" opacity="0.0" prefHeight="59.0" prefWidth="95.0" style="-fx-font-size: 20;" text="." />

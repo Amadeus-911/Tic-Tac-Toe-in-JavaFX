@@ -28,11 +28,23 @@ public class Controller {
 
     @FXML protected AnchorPane background;
     @FXML protected RadioButton forest;
+    @FXML protected RadioButton classic;
+
+    @FXML protected Line boardLine1;
+    @FXML protected Line boardLine2;
+    @FXML protected Line boardLine3;
+    @FXML protected Line boardLine4;
 
     public void changeTheme(){
+        Theme theme = new Theme();
         if(forest.isSelected()){
-        background.setStyle("-fx-background-color: lightgreen");
+            theme.forest(background,boardLine1,boardLine2,boardLine3,boardLine4);
         }
+        else if(classic.isSelected()){
+            theme.classic(background,boardLine1,boardLine2,boardLine3,boardLine4);
+
+        }
+
     }
 
     @FXML protected Label label1;
