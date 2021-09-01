@@ -7,6 +7,8 @@ import java.util.List;
 public class Defensive_Ai extends AI{
 
     char board[][];
+    private Object NullType;
+
     public Defensive_Ai(char board[][]){
         this.board = board;
     }
@@ -16,7 +18,6 @@ public class Defensive_Ai extends AI{
             int row, col;
         }
 
-        int arr[];
         private final int INFINITY = 999999;
         private final char ai = 'o', player = 'x';
 
@@ -161,12 +162,11 @@ public class Defensive_Ai extends AI{
 // move for the ai
          int[] findBestMove(char board[][])
         {
+            int arr[] = {-1,-1};
             int bestVal = -1000;
 //            Move bestMove = new Move();
 //            bestMove.row = -1;
 //            bestMove.col = -1;
-            arr[0] = -1;
-            arr[1] = -1;
 
             // Traverse all cells, getScore minimax function
             // for all empty cells. And return the cell
@@ -210,10 +210,52 @@ public class Defensive_Ai extends AI{
     public void move(Label label1, Label label2, Label label3, Label label4, Label label5,
                      Label label6, Label label7, Label label8, Label label9, List<Integer> tiles,char[][] board){
 
-        Label tile = label1;
+
         int move[] = findBestMove(board);
         System.out.println(move[0]+" "+move[1]);
+        System.out.println(board[0][0]+" "+board[0][1]+" "+board[0][2]+"\n"+
+                board[1][0]+" "+board[1][1]+" "+board[1][2]+"\n"+
+                board[2][0]+" "+board[2][1]+" "+board[2][2]);
         System.out.println("Def move");
-        drawO(tile);
+
+        if(move[0] == 0 && move[1] == 0){
+            Label tile = label1;
+            drawO(tile);
+        }
+        else if(move[0] == 0 && move[1] == 1){
+            Label tile = label2;
+            drawO(tile);
+        }
+        else if(move[0] == 0 && move[1] == 2){
+            Label tile = label3;
+            drawO(tile);
+        }
+        else if(move[0] == 1 && move[1] == 0){
+            Label tile = label4;
+            drawO(tile);
+        }
+        else if(move[0] == 1 && move[1] == 1){
+            Label tile = label5;
+            drawO(tile);
+        }
+        else if(move[0] == 1 && move[1] == 2){
+            Label tile = label6;
+            drawO(tile);
+        }
+        else if(move[0] == 2 && move[1] == 0){
+            Label tile = label7;
+            drawO(tile);
+        }
+        else if(move[0] == 2 && move[1] == 1){
+            Label tile = label8;
+            drawO(tile);
+        }
+        else if(move[0] == 2 && move[1] == 2){
+            Label tile = label9;
+            drawO(tile);
+        }
+
+
+
     }
 }
