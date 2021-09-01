@@ -6,13 +6,19 @@ import java.util.List;
 
 public class Defensive_Ai extends AI{
 
+    char board[][];
+    public Defensive_Ai(char board[][]){
+        this.board = board;
+    }
+
         class Move
         {
             int row, col;
         }
 
+        int arr[];
         private final int INFINITY = 999999;
-        static char ai = 'o', player = 'x';
+        private final char ai = 'o', player = 'x';
 
 
         Boolean isMovesLeft(char board[][])
@@ -153,12 +159,14 @@ public class Defensive_Ai extends AI{
 
         // This will return the best possible
 // move for the ai
-        Move findBestMove(char board[][])
+         int[] findBestMove(char board[][])
         {
             int bestVal = -1000;
-            Move bestMove = new Move();
-            bestMove.row = -1;
-            bestMove.col = -1;
+//            Move bestMove = new Move();
+//            bestMove.row = -1;
+//            bestMove.col = -1;
+            arr[0] = -1;
+            arr[1] = -1;
 
             // Traverse all cells, getScore minimax function
             // for all empty cells. And return the cell
@@ -185,31 +193,24 @@ public class Defensive_Ai extends AI{
                         // best/
                         if (moveVal > bestVal)
                         {
-                            bestMove.row = i;
-                            bestMove.col = j;
+//                            bestMove.row = i;
+//                            bestMove.col = j;
+                            arr[0] = i;
+                            arr[1] = j;
                             bestVal = moveVal;
                         }
                     }
                 }
             }
 
-            return bestMove;
+            return arr;
         }
 
-        // Driver code
-        public static void main(String[] args)
-        {
-            char board[][] = {  { 'x', 'o', 'x' },
-                                { 'o', 'o', 'x' },
-                                { 'x', 'o', '_' }};
 
-            Move bestMove = findBestMove(board);
 
-            System.out.printf("The Optimal Move is :\n");
-            System.out.printf("ROW: %d COL: %d\n\n",
-                    bestMove.row, bestMove.col );
+        public void setBestMove(){
+            arr = findBestMove(board);
         }
-
 
 
 

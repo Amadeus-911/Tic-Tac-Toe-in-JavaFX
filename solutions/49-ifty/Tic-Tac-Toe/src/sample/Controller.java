@@ -13,6 +13,7 @@ import static sample.Window.endGameMsg;
 
 public class Controller {
 
+    private char board[][] = createBoard();
     private final String X = "X";
     private final String win = "You have won";
     private final String lose = "You lost";
@@ -20,6 +21,7 @@ public class Controller {
     private boolean turnX = true;
     private boolean isTie = false;
     private boolean isPlayable = true;
+    private int tile[];
 
     Player player = new Player();
     Random_Ai randomAi = new Random_Ai();
@@ -70,6 +72,7 @@ public class Controller {
         isTie = false;
         clean(label1, label2, label3, label4, label5, label6, label7, label8, label9, line1,line2,line3,line4,line5,line6,line7,line8,tiles);
         tiles = createList();
+        board = createBoard();
     }
 
     public void drawGameOverLine(){
@@ -112,10 +115,11 @@ public class Controller {
     public void tile1(){
         System.out.println("Hello I'm Tile 1");
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
-
+            tile[0] = 0;
+            tile[1] = 0;
             if (isEmpty(label1)) {
                 if (turnX) {
-                    player.drawX(label1);
+                    player.drawX(label1, tile, board);
                     tiles.remove(Integer.valueOf(1));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -146,10 +150,12 @@ public class Controller {
     public void  tile2(){
         System.out.println("Hello I'm Tile 2");
 
+        tile[0] = 0;
+        tile[1] = 1;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label2)) {
                 if (turnX) {
-                    player.drawX(label2);
+                    player.drawX(label2, tile, board);
                     tiles.remove(Integer.valueOf(2));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -173,10 +179,12 @@ public class Controller {
     }
     public void  tile3(){
 
+        tile[0] = 0;
+        tile[1] = 2;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label3)) {
                 if (turnX) {
-                    player.drawX(label3);
+                    player.drawX(label3, tile, board);
                     tiles.remove(Integer.valueOf(3));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -199,10 +207,13 @@ public class Controller {
         }
     }
     public void  tile4(){
+
+        tile[0] = 1;
+        tile[1] = 0;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label4)) {
                 if (turnX) {
-                    player.drawX(label4);
+                    player.drawX(label4, tile, board);
                     tiles.remove(Integer.valueOf(4));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -227,10 +238,12 @@ public class Controller {
     public void  tile5(){
         System.out.println("Hello I'm Tile 5");
 
+        tile[0] = 1;
+        tile[1] = 1;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label5)) {
                 if (turnX) {
-                    player.drawX(label5);
+                    player.drawX(label5, tile, board);
                     tiles.remove(Integer.valueOf(5));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -255,10 +268,12 @@ public class Controller {
     public void  tile6(){
         System.out.println("Hello I'm Tile 6");
 
+        tile[0] = 1;
+        tile[1] = 2;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label6)) {
                 if (turnX) {
-                    player.drawX(label6);
+                    player.drawX(label6, tile, board);
                     tiles.remove(Integer.valueOf(6));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -283,10 +298,12 @@ public class Controller {
     public void  tile7(){
         System.out.println("Hello I'm Tile 7");
 
+        tile[0] = 2;
+        tile[1] = 0;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label7)) {
                 if (turnX) {
-                    player.drawX(label7);
+                    player.drawX(label7, tile, board);
                     tiles.remove(Integer.valueOf(7));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -311,10 +328,12 @@ public class Controller {
     public void  tile8(){
         System.out.println("Hello I'm Tile 8");
 
+        tile[0] = 2;
+        tile[1] = 1;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label8)) {
                 if (turnX) {
-                    player.drawX(label8);
+                    player.drawX(label8, tile, board);
                     tiles.remove(Integer.valueOf(8));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -339,10 +358,12 @@ public class Controller {
     public void  tile9(){
         System.out.println("Hello I'm Tile 9");
 
+        tile[0] = 2;
+        tile[1] = 2;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label9)) {
                 if (turnX) {
-                    player.drawX(label9);
+                    player.drawX(label9, tile, board);
                     tiles.remove(Integer.valueOf(9));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
