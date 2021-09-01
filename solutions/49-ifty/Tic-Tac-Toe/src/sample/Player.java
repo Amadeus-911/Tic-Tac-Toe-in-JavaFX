@@ -8,10 +8,10 @@ public class Player {
     public void getLabel(Label label){
         this.label = label;
     }
-    public void drawX(Label label, int[] tile, char[][] board){
+    public void drawX(Label label, int row, int col, char[][] board){
         label.setText("X");
         label.setOpacity(1);
-        board[tile[0]][tile[1]] = 'x';
+        board[row][col] = 'x';
     }
 
 

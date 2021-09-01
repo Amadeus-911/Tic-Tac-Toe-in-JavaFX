@@ -39,7 +39,7 @@ public class Random_Ai extends AI{
 
 
     public void move(Label label1, Label label2, Label label3, Label label4, Label label5,
-                                Label label6, Label label7, Label label8, Label label9, List<Integer> tiles){
+                                Label label6, Label label7, Label label8, Label label9, List<Integer> tiles, char[][] board){
 
         Label tile = randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9, tiles);
         drawO(tile);

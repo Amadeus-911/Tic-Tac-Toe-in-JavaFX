@@ -207,18 +207,13 @@ public class Defensive_Ai extends AI{
         }
 
 
-
-        public void setBestMove(){
-            arr = findBestMove(board);
-        }
-
-
-
-
     public void move(Label label1, Label label2, Label label3, Label label4, Label label5,
-                     Label label6, Label label7, Label label8, Label label9, List<Integer> tiles){
+                     Label label6, Label label7, Label label8, Label label9, List<Integer> tiles,char[][] board){
 
         Label tile = label1;
+        int move[] = findBestMove(board);
+        System.out.println(move[0]+" "+move[1]);
+        System.out.println("Def move");
         drawO(tile);
     }
 }

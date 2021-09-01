@@ -13,7 +13,7 @@ import static sample.Window.endGameMsg;
 
 public class Controller {
 
-    private char board[][] = createBoard();
+    private char board[][] = {{'_','_','_'},{'_','_','_'},{'_','_','_'}};
     private final String X = "X";
     private final String win = "You have won";
     private final String lose = "You lost";
@@ -24,7 +24,7 @@ public class Controller {
     private int tile[];
 
     Player player = new Player();
-    Random_Ai randomAi = new Random_Ai();
+    Random_Ai ai = new Random_Ai();
 
     public List<Integer> tiles = createList();
 
@@ -45,6 +45,16 @@ public class Controller {
         else if(classic.isSelected()){
             theme.classic(background,boardLine1,boardLine2,boardLine3,boardLine4);
         }
+    }
+
+    public char[][] createBoard(char[][] board){
+        int i, j;
+        for(i = 0; i<3;i++){
+            for(j = 0; j< 3; j++){
+                board[i][j] = '_';
+            }
+        }
+        return board;
     }
 
     @FXML protected Label label1;
@@ -72,7 +82,18 @@ public class Controller {
         isTie = false;
         clean(label1, label2, label3, label4, label5, label6, label7, label8, label9, line1,line2,line3,line4,line5,line6,line7,line8,tiles);
         tiles = createList();
-        board = createBoard();
+        board = new char[][]{{'_', '_', '_'}, {'_', '_', '_'}, {'_', '_', '_'}};
+    }
+
+    public void initializeRandomai(){
+        Random_Ai ai = new Random_Ai();
+        reset();
+        System.out.println("Random AI");
+    }
+    public void initializeDefensiveAi(){
+        Defensive_Ai ai = new Defensive_Ai(board);
+        reset();
+        System.out.println("Defensive AI");
     }
 
     public void drawGameOverLine(){
@@ -114,12 +135,12 @@ public class Controller {
 
     public void tile1(){
         System.out.println("Hello I'm Tile 1");
+        int row = 0;
+        int col = 0;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
-            tile[0] = 0;
-            tile[1] = 0;
             if (isEmpty(label1)) {
                 if (turnX) {
-                    player.drawX(label1, tile, board);
+                    player.drawX(label1, row, col, board);
                     tiles.remove(Integer.valueOf(1));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -129,7 +150,7 @@ public class Controller {
                         }
                         return;
                     }
-                    randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9, tiles);
+                    ai.move(label1, label2, label3, label4, label5, label6, label7, label8, label9, tiles, board);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
@@ -150,12 +171,12 @@ public class Controller {
     public void  tile2(){
         System.out.println("Hello I'm Tile 2");
 
-        tile[0] = 0;
-        tile[1] = 1;
+        int row = 0;
+        int col = 1;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label2)) {
                 if (turnX) {
-                    player.drawX(label2, tile, board);
+                    player.drawX(label2, row, col, board);
                     tiles.remove(Integer.valueOf(2));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -163,7 +184,7 @@ public class Controller {
                         if(!isTie){endGameMsg(win);}
                         return;
                     }
-                    randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles);
+                    ai.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles,board);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
@@ -179,12 +200,12 @@ public class Controller {
     }
     public void  tile3(){
 
-        tile[0] = 0;
-        tile[1] = 2;
+        int row = 0;
+        int col = 2;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label3)) {
                 if (turnX) {
-                    player.drawX(label3, tile, board);
+                    player.drawX(label3, row, col, board);
                     tiles.remove(Integer.valueOf(3));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -192,7 +213,7 @@ public class Controller {
                         if(!isTie){endGameMsg(win);}
                         return;
                     }
-                    randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles);
+                    ai.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles, board);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
@@ -208,12 +229,12 @@ public class Controller {
     }
     public void  tile4(){
 
-        tile[0] = 1;
-        tile[1] = 0;
+        int row = 1;
+        int col = 0;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label4)) {
                 if (turnX) {
-                    player.drawX(label4, tile, board);
+                    player.drawX(label4, row, col, board);
                     tiles.remove(Integer.valueOf(4));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -221,7 +242,7 @@ public class Controller {
                         if(!isTie){endGameMsg(win);}
                         return;
                     }
-                    randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles);
+                    ai.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles, board);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
@@ -238,12 +259,12 @@ public class Controller {
     public void  tile5(){
         System.out.println("Hello I'm Tile 5");
 
-        tile[0] = 1;
-        tile[1] = 1;
+        int row = 1;
+        int col = 1;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label5)) {
                 if (turnX) {
-                    player.drawX(label5, tile, board);
+                    player.drawX(label5, row, col, board);
                     tiles.remove(Integer.valueOf(5));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -251,7 +272,7 @@ public class Controller {
                         if(!isTie){endGameMsg(win);}
                         return;
                     }
-                    randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles);
+                    ai.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles, board);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
@@ -268,12 +289,12 @@ public class Controller {
     public void  tile6(){
         System.out.println("Hello I'm Tile 6");
 
-        tile[0] = 1;
-        tile[1] = 2;
+        int row = 1;
+        int col = 2;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label6)) {
                 if (turnX) {
-                    player.drawX(label6, tile, board);
+                    player.drawX(label6, row, col, board);
                     tiles.remove(Integer.valueOf(6));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -281,7 +302,7 @@ public class Controller {
                         if(!isTie){endGameMsg(win);}
                         return;
                     }
-                    randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles);
+                    ai.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles, board);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
@@ -298,12 +319,12 @@ public class Controller {
     public void  tile7(){
         System.out.println("Hello I'm Tile 7");
 
-        tile[0] = 2;
-        tile[1] = 0;
+        int row = 2;
+        int col = 0;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label7)) {
                 if (turnX) {
-                    player.drawX(label7, tile, board);
+                    player.drawX(label7, row, col, board);
                     tiles.remove(Integer.valueOf(7));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -311,7 +332,7 @@ public class Controller {
                         if(!isTie){endGameMsg(win);}
                         return;
                     }
-                    randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles);
+                    ai.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles, board);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
@@ -328,12 +349,12 @@ public class Controller {
     public void  tile8(){
         System.out.println("Hello I'm Tile 8");
 
-        tile[0] = 2;
-        tile[1] = 1;
+        int row = 2;
+        int col = 1;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label8)) {
                 if (turnX) {
-                    player.drawX(label8, tile, board);
+                    player.drawX(label8, row, col, board);
                     tiles.remove(Integer.valueOf(8));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -341,7 +362,7 @@ public class Controller {
                         if(!isTie){endGameMsg(win);}
                         return;
                     }
-                    randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles);
+                    ai.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles, board);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
@@ -358,12 +379,12 @@ public class Controller {
     public void  tile9(){
         System.out.println("Hello I'm Tile 9");
 
-        tile[0] = 2;
-        tile[1] = 2;
+        int row = 2;
+        int col = 2;
         if(!isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
             if (isEmpty(label9)) {
                 if (turnX) {
-                    player.drawX(label9, tile, board);
+                    player.drawX(label9, row, col, board);
                     tiles.remove(Integer.valueOf(9));
                     turnX = false;
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
@@ -371,7 +392,7 @@ public class Controller {
                         if(!isTie){endGameMsg(win);}
                         return;
                     }
-                    randomAi.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles);
+                    ai.move(label1, label2, label3, label4, label5, label6, label7, label8, label9,tiles, board);
 
                     if (isGameOver(label1, label2, label3, label4, label5, label6, label7, label8, label9)) {
                         drawGameOverLine();
@@ -386,4 +407,6 @@ public class Controller {
         }
 
     }
+
+
 }
