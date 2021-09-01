@@ -22,7 +22,7 @@ public class Controller {
     private boolean isTie = false;
     private boolean isPlayable = true;
     private int tile[];
-
+    public static int aiNum = 0;
     Player player = new Player();
 //    Random_Ai ai = new Random_Ai();
 
@@ -47,16 +47,6 @@ public class Controller {
         }
     }
 
-    public char[][] createBoard(char[][] board){
-        int i, j;
-        for(i = 0; i<3;i++){
-            for(j = 0; j< 3; j++){
-                board[i][j] = '_';
-            }
-        }
-        return board;
-    }
-
     @FXML protected Label label1;
     @FXML protected Label label2;
     @FXML protected Label label3;
@@ -78,6 +68,8 @@ public class Controller {
     @FXML private Line line8;
 
     Defensive_Ai ai = new Defensive_Ai(board);
+    //Random_Ai ai = initializeRandomAi();
+
     public void reset(){
         turnX = true;
         isTie = false;
@@ -89,13 +81,15 @@ public class Controller {
                 board[2][0]+" "+board[2][1]+" "+board[2][2]);
     }
 
-    public void initializeRandomai(){
-        Random_Ai ai = new Random_Ai();
+    @FXML
+    public void initializeRandomAi(){
+        aiNum = 0;
         reset();
         System.out.println("Random AI");
     }
+    @FXML
     public void initializeDefensiveAi(){
-        Defensive_Ai ai = new Defensive_Ai(board);
+        aiNum = 1;
         reset();
         System.out.println("Defensive AI");
     }

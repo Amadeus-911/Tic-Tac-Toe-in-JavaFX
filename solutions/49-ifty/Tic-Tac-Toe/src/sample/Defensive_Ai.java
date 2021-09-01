@@ -88,12 +88,12 @@ public class Defensive_Ai extends AI{
 
             // If Maximizer has won the game
             // return his/her getScored score
-            if (score == 10)
+            if (score == 1)
                 return score;
 
             // If Minimizer has won the game
             // return his/her getScored score
-            if (score == -10)
+            if (score == -1)
                 return score;
 
             // If there are no more moves and
@@ -220,39 +220,57 @@ public class Defensive_Ai extends AI{
 
         if(move[0] == 0 && move[1] == 0){
             Label tile = label1;
-            drawO(tile);
+            int row = 0;
+            int col = 0;
+            drawO(tile,row, col, board);
         }
         else if(move[0] == 0 && move[1] == 1){
             Label tile = label2;
-            drawO(tile);
+            int row = 0;
+            int col = 1;
+            drawO(tile,row, col, board);
         }
         else if(move[0] == 0 && move[1] == 2){
             Label tile = label3;
-            drawO(tile);
+            int row = 0;
+            int col = 2;
+            drawO(tile,row, col, board);
         }
         else if(move[0] == 1 && move[1] == 0){
             Label tile = label4;
-            drawO(tile);
+            int row = 1;
+            int col = 0;
+            drawO(tile,row, col, board);
         }
         else if(move[0] == 1 && move[1] == 1){
             Label tile = label5;
-            drawO(tile);
+            int row = 1;
+            int col = 1;
+            drawO(tile,row, col, board);
         }
         else if(move[0] == 1 && move[1] == 2){
             Label tile = label6;
-            drawO(tile);
+            int row = 1;
+            int col = 2;
+            drawO(tile,row, col, board);
         }
         else if(move[0] == 2 && move[1] == 0){
             Label tile = label7;
-            drawO(tile);
+            int row = 2;
+            int col = 0;
+            drawO(tile,row, col, board);
         }
         else if(move[0] == 2 && move[1] == 1){
             Label tile = label8;
-            drawO(tile);
+            int row = 2;
+            int col = 1;
+            drawO(tile,row, col, board);
         }
-        else if(move[0] == 2 && move[1] == 2){
+        else {
             Label tile = label9;
-            drawO(tile);
+            int row = 2;
+            int col = 2;
+            drawO(tile,row, col, board);
         }
 
 
