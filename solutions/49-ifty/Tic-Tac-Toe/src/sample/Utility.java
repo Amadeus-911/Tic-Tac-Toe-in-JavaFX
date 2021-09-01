@@ -25,6 +25,19 @@ public final class Utility {
         return tiles;
     }
 
+
+    public static char[][] createBoard(){
+        int i, j;
+        char board[][] = {};
+
+        for(i = 0; i<3;i++){
+            for(j = 0; j< 3; j++){
+                board[i][j] = '_';
+            }
+        }
+        return board;
+    }
+
     public static int rand(List<Integer> tiles){
 
         Random rand = new Random();
