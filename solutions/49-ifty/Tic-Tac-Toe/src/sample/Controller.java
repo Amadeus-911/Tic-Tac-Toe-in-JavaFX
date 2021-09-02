@@ -129,6 +129,10 @@ public class Controller {
         }
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd1325a088b9454c11cbd107501e8e188bcc38cb
     public void tile1(){
         System.out.println("Hello I'm Tile 1");
         int row = 0;

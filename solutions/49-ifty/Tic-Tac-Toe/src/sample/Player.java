@@ -9,7 +9,4 @@ public class Player {
         label.setOpacity(1);
         board[row][col] = 'x';
     }
-
-
-
 }
