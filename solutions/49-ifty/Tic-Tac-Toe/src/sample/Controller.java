@@ -129,7 +129,6 @@ public class Controller {
         }
     }
 
-
     public void tile1(){
         System.out.println("Hello I'm Tile 1");
         int row = 0;
