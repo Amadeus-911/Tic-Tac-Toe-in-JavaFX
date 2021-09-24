@@ -19,4 +19,11 @@ public class Theme {
         boardLine3.setStroke(Paint.valueOf("Black"));
         boardLine4.setStroke(Paint.valueOf("Black"));
     }
+    public void highContrast(AnchorPane background, Line boardLine1,Line boardLine2,Line boardLine3,Line boardLine4){
+        background.setStyle("-fx-background-color: grey");
+        boardLine1.setStroke(Paint.valueOf("White"));
+        boardLine2.setStroke(Paint.valueOf("White"));
+        boardLine3.setStroke(Paint.valueOf("White"));
+        boardLine4.setStroke(Paint.valueOf("White"));
+    }
 }

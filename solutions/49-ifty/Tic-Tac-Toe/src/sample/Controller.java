@@ -20,8 +20,6 @@ public class Controller {
     private  final String tie = "The game is Tied";
     private boolean turnX = true;
     private boolean isTie = false;
-    private boolean isPlayable = true;
-    private int tile[];
     public static int aiNum = 0;
 
     Player player = new Player();
@@ -33,6 +31,7 @@ public class Controller {
     @FXML protected AnchorPane background;
     @FXML protected RadioButton forest;
     @FXML protected RadioButton classic;
+    @FXML protected RadioButton highContrast;
 
     @FXML protected Line boardLine1;
     @FXML protected Line boardLine2;
@@ -46,6 +45,9 @@ public class Controller {
         }
         else if(classic.isSelected()){
             theme.classic(background,boardLine1,boardLine2,boardLine3,boardLine4);
+        }
+        else if(highContrast.isSelected()){
+            theme.highContrast(background,boardLine1,boardLine2,boardLine3,boardLine4);
         }
     }
 

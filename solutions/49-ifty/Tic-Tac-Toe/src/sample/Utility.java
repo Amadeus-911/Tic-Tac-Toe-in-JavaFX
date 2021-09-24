@@ -74,48 +74,6 @@ public final class Utility {
 
 
 
-//        switch (tile){
-//            case 1:
-//                if(isEmpty(label1)){
-//                    return 1;
-//                }
-//            case 2:
-//                if(isEmpty(label2)){
-//                    return 2;
-//                }
-//            case 3:
-//                if(isEmpty(label3)){
-//                    return 3;
-//                }
-//            case 4:
-//                if(isEmpty(label4)){
-//                    return 4;
-//                }
-//            case 5:
-//                if(isEmpty(label5)){
-//                    return 5;
-//                }
-//            case 6:
-//                if(isEmpty(label6)){
-//                    return 6;
-//                }
-//            case 7:
-//                if(isEmpty(label7)){
-//                    return 7;
-//                }
-//            case 8:
-//                if(isEmpty(label8)){
-//                    return 8;
-//                }
-//            case 9:
-//                if(isEmpty(label9)) {
-//                    return 9;
-//                }
-//            default:
-//                return randomTile(label1, label2, label3, label4, label5, label6, label7, label8, label9);
-//
-//        }
-
     public static boolean isGameOver(Label label1, Label label2, Label label3, Label label4, Label label5,
                                      Label label6, Label label7, Label label8, Label label9){
 
