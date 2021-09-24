@@ -9,7 +9,5 @@ public class AI {
         label.setOpacity(1);
         board[row][col] = 'o';
     }
-    public void move(){
-
-    }
+    public void move(){ }
 }
